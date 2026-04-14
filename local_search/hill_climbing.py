@@ -12,7 +12,6 @@ class HillClimbing():
         score = self.problem.evaluate(state)
 
         while True:
-            # get neighbors
             neighbors = self.get_neighbors(state)
             if not neighbors:
                 break

@@ -31,18 +31,6 @@ class StreetProblem:
                 return action
         raise ValueError('Action not possible')
 
-    def explore(self, path):
-        state = self.initial_state
-        evolution = [('S',state)]
-        is_solution = False
-        for action in path:
-            evolution.append(('A',action))
-            state = self.result(state, action)
-            evolution.append(('S',state))
-        if state == self.goal_state:
-            is_solution = True
-        return evolution, is_solution
-
     def action_cost(self, state, action):
         for street in streets: 
             c1, c2, cost = street

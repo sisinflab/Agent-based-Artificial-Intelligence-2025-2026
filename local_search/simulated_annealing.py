@@ -9,7 +9,7 @@ class SimulatedAnnealing():
     def search(self):
         current = self.problem.initial_state
         T = self.scheduler.get_temperature()
-        while T > 0.0001:  # Temperature is greater than 0.0001
+        while T > 0.0001:  
             neighbors = self.problem.actions(current)
             if not neighbors:
                 return current
@@ -29,10 +29,8 @@ class Scheduler:
         self.iterations = iterations
         self.t = 0
         self.alpha = alpha
-        if scheduler == 'linear':
-            self.scheduler = self.linear_scheduler
-        elif scheduler == 'exponential':
-            self.scheduler = self.exponential_scheduler
+        if scheduler == 'basic':
+            self.scheduler = self.basic_scheduler
         else:
             raise ValueError('Unknown scheduler')
 
@@ -48,10 +46,7 @@ class Scheduler:
         temp = self.get_temperature()
         self.t += 1
         return temp
+    
+    def basic_scheduler(self):
+        return 100 - self.t
 
-    def linear_scheduler(self):
-        return max(0, 100 - self.alpha * self.t)
-
-    def exponential_scheduler(self):
-        # exponetial 
-        return 100 * math.exp(-self.alpha * self.t)

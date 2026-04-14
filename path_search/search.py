@@ -32,7 +32,6 @@ class Search:
             visited[node.state] = node.path_cost
             new_nodes = expand(node, self.problem)
             fringe = fringe + new_nodes
-            # input('Press Enter to continue...')
         
         return None
 
