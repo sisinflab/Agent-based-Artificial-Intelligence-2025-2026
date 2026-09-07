@@ -25,3 +25,4 @@ This repository is still evolving. The sections above describe only the material
 - Gabriele Squeo (A.Y. 2025/2026)
 - Roberta Armenise (A.Y. 2025/2026)
 - Francesco Polieri (A.Y. 2025/2026)
+- Matteo Di Maria (A.Y. 2025/2026)
