@@ -26,3 +26,4 @@ This repository is still evolving. The sections above describe only the material
 - Roberta Armenise (A.Y. 2025/2026)
 - Francesco Polieri (A.Y. 2025/2026)
 - Matteo Di Maria (A.Y. 2025/2026)
+- Antonio Balducci (A.Y. 2025/2026)
